@@ -1,0 +1,210 @@
+/* ------------------------------------- */
+/* 1. RàZ (Reset) et Variables globales  */
+/* ------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Simplifie le calcul des largeurs/hauteurs */
+}
+
+:root {
+    /* Couleurs */
+    --main-bg-color: #f7f3ed; /* Fond beige très clair */
+    --header-footer-color: #5d4037; /* Marron foncé pour l'en-tête et le pied de page */
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    
+    /* Polices */
+    --font-serif: serif; /* Police de style ancien pour les titres/en-têtes */
+    --font-sans: 'Arial', sans-serif; /* Police moderne pour le corps */
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--main-bg-color);
+    color: var(--text-dark);
+}
+
+a {
+    text-decoration: none; /* Supprime le soulignement des liens */
+    color: inherit; /* Les liens héritent de la couleur du texte parent */
+}
+
+/* ------------------------------------- */
+/* 2. En-tête (Header) et Navigation     */
+/* ------------------------------------- */
+header {
+    background-color: var(--header-footer-color);
+    color: var(--text-light);
+    padding: 10px 20px;
+    font-family: var(--font-serif);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limite la largeur du contenu central */
+    margin: 0 auto;
+}
+
+.menu-icon, .cart-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    padding: 5px;
+}
+
+.site-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* ------------------------------------- */
+/* 3. Corps de la Page (Main)            */
+/* ------------------------------------- */
+.gallery-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.page-heading {
+    text-align: left;
+    font-size: 2.5rem;
+    color: var(--header-footer-color);
+    margin-bottom: 20px;
+    font-family: var(--font-serif);
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc; /* Séparateur sous BOUTIQUE */
+    padding-bottom: 10px;
+}
+
+/* ------------------------------------- */
+/* 4. Grille des Œuvres (Artworks)       */
+/* ------------------------------------- */
+.artworks-grid {
+    display: grid;
+    /* Crée 3 colonnes de taille égale. Pour un écran plus petit, une colonne suffit */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; /* Espace entre les images */
+    padding: 20px 0;
+}
+
+.artwork-item {
+    text-align: left;
+}
+
+.artwork-item img {
+    width: 100%;
+    height: auto;
+    /* Assure que toutes les images ont la même proportion visuelle que sur la maquette */
+    aspect-ratio: 1 / 1.3; 
+    object-fit: cover;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.artist-name {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.artwork-title {
+    font-style: italic;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* ------------------------------------- */
+/* 5. Pied de Page (Footer)              */
+/* ------------------------------------- */
+.site-footer {
+    background-color: var(--header-footer-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.9rem;
+    font-family: var(--font-sans);
+}
+
+.contact-info {
+    max-width: 400px;
+    margin: 0 auto 30px;
+    line-height: 1.5;
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.pro-link {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.legal-social-section {
+    max-width: 400px;
+    margin: 0 auto 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.legal-text a {
+    margin: 0 5px;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #d1c4e9; /* Une couleur légèrement plus claire au survol */
+}
+
+.copyright {
+    font-size: 0.75rem;
+    margin-top: 10px;
+}
+
+/* ------------------------------------- */
+/* 6. Adaptabilité (Responsive)          */
+/* ------------------------------------- */
+/* Pour les petits écrans (smartphones) */
+@media (max-width: 768px) {
+    .artworks-grid {
+        /* Passe de 3 à 2 colonnes sur les tablettes */
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .legal-social-section {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Pour les très petits écrans (petits smartphones) */
+@media (max-width: 480px) {
+    .artworks-grid {
+        /* Passe à une seule colonne sur les petits téléphones */
+        grid-template-columns: 1fr;
+    }
+    .page-heading {
+        font-size: 2rem;
+    }
+    .site-title {
+        font-size: 1rem;
+    }
+}
