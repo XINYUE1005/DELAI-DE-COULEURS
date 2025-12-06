@@ -35,14 +35,29 @@ header{position:sticky;top:0;z-index:1030;}
 /* .eyebrow{letter-spacing:.16em;text-transform:uppercase} */
 
 /* Sections */
-.section-title{letter-spacing:.08em;text-transform:uppercase;font-size:1.4rem}
-.thumb{margin:0}
-.legend{font-size:.9rem;text-align:center;margin-top:.35rem}
-.artist-name{font-weight:600}
-.expo-caption{font-size:.95rem}
+.section-title{
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  font-size:1.4rem
+}
+.thumb{
+  margin:0
+}
+.legend{
+  font-size:.9rem;
+  text-align:center;
+  margin-top:.35rem
+}
+.artist-name{
+  font-weight:600
+}
+.expo-caption{
+  font-size:.95rem
+}
 
 /* Cards / grids */
-img.rounded{border: radius 8px;
+img.rounded{
+  border: radius 8px;
   margin-left: 65px;
 }
 /* 让艺术家图片大小更统一 */
@@ -54,7 +69,7 @@ img.rounded{border: radius 8px;
 
 /* 名字排版 */
 .artist-name {
-  font-family: "Playfair Display", serif;
+  font-family: League Spartan;
   font-size: 18px;
   font-weight: 500;
   margin-top: 10px;
@@ -70,19 +85,38 @@ img.rounded{border: radius 8px;
 }
 
 /* CTA */
-.btn-rose{background:var(--rose);color:#fff;border-radius:8px;padding:.5rem 1.25rem}
-.btn-rose:hover{opacity:.9;color:#fff}
+.btn-rose{
+  background:var(--rose);
+  color:#fff;
+  border-radius:8px;
+  padding:.5rem 1.25rem
+}
+.btn-rose:hover{
+  opacity:.9;
+  color:#fff
+}
 
 /* Footer */
-.site-footer{background:#f0e8db}
-.footer-title{letter-spacing:.12em;text-transform:uppercase;font-size:1.1rem}
+.site-footer{
+  background:#f0e8db
+}
+.footer-title{
+  font-family: League Spartan;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-size:1.1rem
+}
 
 /* Responsive tweaks */
-@media (max-width: 992px){
+/* @media (max-width: 992px){
   .hero-img{height:48vh}
-}
+} */
 @media (max-width: 576px){
   .hero-img{height:42vh}
   .navbar-brand{font-size:.85rem}
   .section-title{font-size:1.2rem}
+  .thumb1{position: relative; right: 20px;width: 80%;}
+  .thumb{position: relative; left: 5%;}
+  .legend{position: relative; right: 5%;}
 }
+

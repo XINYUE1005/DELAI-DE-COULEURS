@@ -1,3 +1,13 @@
+:root {
+  --bordeaux: #55241D;
+  --rose: #CC897E;
+  --beige: #F6EEE8;
+  --text: #2E2E2E;
+  --white: #FFFFFF;
+  --font-title: League Spartan;
+  --font-body: League Spartan;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -80,6 +90,9 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
+    text-decoration: none;
+    color: white;
+    font-family: League Spartan;
 }
 
 .search-text {

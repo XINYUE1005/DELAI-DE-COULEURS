@@ -1,3 +1,11 @@
+:root {
+  --bg: #f7f3e9;
+  --text: #2f2e26;
+  --bordeaux: #55241d;
+  --rose: #c98b85;
+  --white: #ffffff;
+}
+
 /* RESET */
 * {
     margin: 0;
@@ -14,17 +22,21 @@ body {
 /* NAVBAR */
 .navbar {
     width: 100%;
-    background: #5b3c30;
+    background: #55241d;
     padding: 15px 20px;
     color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: absolute;
+    top: 0;
 }
 
 .navbar .logo {
     font-size: 16px;
     letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
 }
 
 .navbar .icons span {
@@ -37,6 +49,7 @@ body {
     padding: 20px 0;
     text-align:left;
     margin-left: 210px;
+    margin-top: 40px;
 }
 
 .boutique-title h2 {
